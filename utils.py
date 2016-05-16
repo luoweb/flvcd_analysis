@@ -32,7 +32,7 @@ def url_save(url, filepath, force=True, refer = None, is_part = False, faker = F
         else:
             if not is_part:
                 pbar.close()
-                print('Overwriting %s' % tr(os.path.basename(filepath)), '...')
+                print('Overwriting %s' % os.path.basename(filepath), '...')
     elif not os.path.exists(os.path.dirname(filepath)):
         os.mkdir(os.path.dirname(filepath))
 

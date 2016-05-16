@@ -56,8 +56,9 @@ def download_video(url, format='super'):
         if len(parts) > 0:
             break
     try:
-        fmt = fmt_reg.search(parts[0]).groups(0)[0]
+        fmt = fmt_reg.search(parts[0]).group(1)
         files = []
+        print('total {} parts'.format(len(parts)))
         for i, url in enumerate(parts):
             filename = './{}_{}.{}'.format(title, i, fmt)
             url_save(url,  filename)
@@ -65,6 +66,7 @@ def download_video(url, format='super'):
         ffmpeg_concat, to_fmt = ffmpeg_method[fmt]
         output = '{}.{}'.format(title, to_fmt)
         ffmpeg_concat(files, output)
+        print(output)
         for f in files:
             os.remove(f)
     except AttributeError as e:
