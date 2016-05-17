@@ -7,13 +7,13 @@ import argparse
 from urllib import request, parse, error
 import requests
 from bs4 import BeautifulSoup
-from ffmpeg import (
+from .ffmpeg import (
         ffmpeg_concat_ts_to_mkv,
         ffmpeg_concat_mp4_to_mp4,
         ffmpeg_concat_av,
         ffmpeg_concat_flv_to_mp4,
 )
-from utils import url_size, url_save
+from .utils import url_size, url_save
 
 
 headers = {'Host': 'www.flvcd.com'}
