@@ -78,7 +78,7 @@ def getFlvInfo(flvurl):
             getFlv(con, title)
 
 # = = = = = = #
-videourl = 'https://open.163.com/movie/2018/1/C/3/MD806VN3U_MD80773C3.html'
+videourl = 'https://open.163.com/movie/2011/3/R/1/M8O9BOGDE_M8OEETAR1.html'
 format = 'super'  # 'high'  'normal'  'super'
 
 link_list=getLink(videourl)
