@@ -2,6 +2,11 @@ import caffe
 import cv2
 import sys
 
+MODEL_JOB_DIR = '/dli/data/digits/20191216-142804-5401'  
+DATA_JOB_DIR = '/dli/data/digits/20191216-142356-b8a9' 
+ARCHITECTURE = MODEL_JOB_DIR + '/' + 'deploy.prototxt'
+WEIGHTS = MODEL_JOB_DIR + '/' + 'snapshot_iter_756.caffemodel'
+
 def deploy(img_path):
 
     caffe.set_mode_gpu()
